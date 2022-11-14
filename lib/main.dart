@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:movie/splash.dart';
+import 'package:movie/src/config/app_color.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: Colors.white,
+      statusBarColor: DarkTheme.darkerBackground,
       statusBarBrightness: Brightness.dark,
     ));
     return MaterialApp(
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: DarkTheme.darkerBackground,
           textTheme: Theme.of(context).textTheme.apply(
               bodyColor: DarkTheme.white, displayColor: DarkTheme.white)),
-      home: const HomePage(),
+      home: const SplashPage(),
     );
   }
 }
